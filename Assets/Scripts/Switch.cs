@@ -14,10 +14,12 @@ public class Switch : MonoBehaviour
     GameObject obstruction;
 
     AudioSource audioOpen;
+    bool isTurn = false;
     // Start is called before the first frame update
     void Start()
     {
         Init();
+        
     }
 
     private void Init()
@@ -30,8 +32,9 @@ public class Switch : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.tag=="Player")
+        if(collision.gameObject.tag=="Player" && !isTurn)
         {
+            isTurn = true;
             turnOff.SetActive(false);
             turnOn.SetActive(true);
             obstruction.SetActive(false);

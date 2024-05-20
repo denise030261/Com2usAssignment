@@ -551,8 +551,8 @@ RectTransform:
   - {fileID: 1512519770}
   - {fileID: 396620833}
   - {fileID: 333965606}
-  - {fileID: 951843296}
   - {fileID: 1438044421}
+  - {fileID: 951843296}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6737,19 +6737,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 65
+    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 75
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBAA9\uD45C \uAE08\uC561 : "
+  m_Text: 'Target : '
 --- !u!222 &756444547
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9856,12 +9856,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 65
+    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 75
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -10935,21 +10935,53 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3306560774227643064, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 700
+      objectReference: {fileID: 0}
     - target: {fileID: 4356711331813730312, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
       propertyPath: m_Name
       value: GameResult
       objectReference: {fileID: 0}
     - target: {fileID: 4356711331813730312, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4994627688254855777, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
       propertyPath: m_Text
-      value: "\uB3CC\uC544\uAC00\uAE30"
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994627688254855777, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
+    - target: {fileID: 4994627688254855777, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994627688254855777, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6166551118104049885, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
       propertyPath: m_SizeDelta.x
       value: 650
+      objectReference: {fileID: 0}
+    - target: {fileID: 7248730159105404429, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
+      propertyPath: m_Text
+      value: Promotion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7248730159105404429, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
+    - target: {fileID: 7248730159105404429, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7248730159105404429, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7496560001015598861, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
       propertyPath: calculateTime
@@ -10967,6 +10999,22 @@ PrefabInstance:
       propertyPath: gameresultNotDieText
       value: 
       objectReference: {fileID: 8836862238484975715}
+    - target: {fileID: 7632830699629481816, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632830699629481816, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632830699629481816, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632830699629481816, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -350
+      objectReference: {fileID: 0}
     - target: {fileID: 8491789540667512218, guid: 9466aaa9128dfb648804e703a55c910f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -19,6 +19,7 @@ public class MniPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rectTransform.anchoredPosition = new Vector2(player.transform.position.x*(43.0f/23.3f), player.transform.position.y*3);
+        if(player)
+            rectTransform.anchoredPosition = new Vector2(player.transform.position.x*(43.0f/23.3f), player.transform.position.y*3);
     }
 }
