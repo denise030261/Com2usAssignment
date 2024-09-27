@@ -18,7 +18,6 @@ public class Skeleton : Enemy
 
     Vector3 targetPosition;
     Vector3 movePoint1;
-    float flipScale;
     bool movingToEnd = true;
     bool isArrive;
     Animator animator;
@@ -47,14 +46,13 @@ public class Skeleton : Enemy
         if (movingToEnd)
         {
             targetPosition = movePoint1; // Move Location1
-            transform.localScale = new Vector3(-flipScale, transform.localScale.y, transform.localScale.z);
         }
         else
         {
             targetPosition = movePoint2; // Move Location2
-            transform.localScale = new Vector3(flipScale, transform.localScale.y, transform.localScale.z);
         }
 
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         animator.SetBool("isMove", true);
         movingToEnd = !movingToEnd;
         isArrive = false;
@@ -62,7 +60,6 @@ public class Skeleton : Enemy
 
     private void Init()
     {
-        flipScale = transform.localScale.x;
         targetPosition = movePoint2;
         movePoint1 = transform.position;
 
