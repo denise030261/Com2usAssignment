@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb369f24f5717a14882aa97a5a4a3bc3, type: 3}
   m_Name: SlerpMovement
   m_EditorClassIdentifier: 
-  _moveSpeed: 0.01
+  _moveSpeed: 2

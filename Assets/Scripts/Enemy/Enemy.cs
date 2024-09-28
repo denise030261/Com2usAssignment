@@ -27,7 +27,8 @@ public class Enemy : MonoBehaviour
         {
             transform.position = moveStrategy.Move(transform.position, targetPosition);
         }
-        if (transform.position == targetPosition && !isArrive)
+        if ((Mathf.Abs(transform.position.x - targetPosition.x)<=0.01 && Mathf.Abs(transform.position.y - targetPosition.y) <= 0.01) 
+            && !isArrive)
         {
             animator.SetBool("isMove", false);
             isArrive = true;

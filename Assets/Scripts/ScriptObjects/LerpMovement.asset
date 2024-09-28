@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb7af28fed4f1d4b9a3039d2dfdce3c, type: 3}
   m_Name: LerpMovement
   m_EditorClassIdentifier: 
-  _moveSpeed: 1
+  _moveSpeed: 2
