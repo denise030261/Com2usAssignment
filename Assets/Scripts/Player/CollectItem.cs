@@ -19,6 +19,13 @@ public class CollectItem : MonoBehaviour
         Init();
     }
 
+    private void Init()
+    {
+        rb2 = GetComponent<Rigidbody2D>();
+        contanctItem = false;
+        haveItem = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -73,12 +80,5 @@ public class CollectItem : MonoBehaviour
         {
             isGound = false;
         }
-    }
-
-    private void Init()
-    {
-        rb2 = GetComponent<Rigidbody2D>();
-        contanctItem = false;
-        haveItem = false;
     }
 }

@@ -49,6 +49,17 @@ public class Player : MonoBehaviour
         GameManager.instance.Init();
     }
 
+    private void Init()
+    {
+        gameResultDisplay.SetActive(false);
+        flipScale = transform.localScale.x;
+        isGound = false;
+        isNoDamage = false;
+        isMove = true;
+        isLadder = false;
+        CurrentHp = MaxHp;
+    } // Initialization
+
     private void Update()
     {
         if(!isLadder)
@@ -127,7 +138,7 @@ public class Player : MonoBehaviour
         {
             isGound = false;
         }
-
+  
         if (collision.gameObject.tag == "Finish")
         {
             Debug.Log("ÇÃ·§Æû¿¡ ¾øÀ½");
@@ -154,17 +165,6 @@ public class Player : MonoBehaviour
             isLadder = false;
         }
     }
-
-    private void Init()
-    {
-        gameResultDisplay.SetActive(false);
-        flipScale = transform.localScale.x;
-        isGound = false;
-        isNoDamage = false;
-        isMove = true;
-        isLadder = false;
-        CurrentHp = MaxHp;
-    } // Initialization
 
     void ChangeHP()
     {

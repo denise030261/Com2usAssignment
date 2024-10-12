@@ -21,6 +21,13 @@ public class Enemy : MonoBehaviour
         Init();
     }
 
+    private void Init()
+    {
+        targetPosition = targetObject.transform.position;
+        originPosition = transform.position;
+        animator = GetComponent<Animator>();
+    }
+
     void Update()
     {
         if (moveStrategy != null)
@@ -65,12 +72,5 @@ public class Enemy : MonoBehaviour
         }
         animator.SetBool("isMove", true);
         isArrive = false;
-    }
-
-    private void Init()
-    {
-        targetPosition = targetObject.transform.position;
-        originPosition = transform.position;
-        animator = GetComponent<Animator>();
     }
 }

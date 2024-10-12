@@ -49,6 +49,17 @@ public class GameManager : MonoBehaviour
         Init();
     }
 
+    public void Init()
+    {
+        bigMoneyNum = 0;
+        mediumMoneyNum = 0;
+        smallMoneyNum = 0;
+        totalMoney = 0;
+        isDie = false;
+        isMissing = true;
+        isSuccess = false;
+    }
+
     public void CaculateMonoey()
     {
         totalBigMoney = bigMoney * bigMoneyNum;
@@ -70,17 +81,6 @@ public class GameManager : MonoBehaviour
         {
             isSuccess = false;
         }
-    }
-
-    public void Init()
-    {
-        bigMoneyNum = 0;
-        mediumMoneyNum = 0;
-        smallMoneyNum = 0;
-        totalMoney = 0;
-        isDie = false;
-        isMissing = true;
-        isSuccess = false;
     }
 
     void ZeroMoney()
