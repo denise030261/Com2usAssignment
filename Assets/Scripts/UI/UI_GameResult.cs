@@ -57,7 +57,7 @@ public class UI_GameResult : MonoBehaviour
         {
             Init();
 
-            if (!GameManager.instance.isMissing && !GameManager.instance.isDie)
+            if (!GameManager.Instance.isMissing && !GameManager.Instance.isDie)
             {
                 gameresultDieJud.SetActive(false);
                 gameresultNotDieJud.SetActive(true);
@@ -75,24 +75,24 @@ public class UI_GameResult : MonoBehaviour
 
     void ShowJudgement()
     {
-        if (GameManager.instance.isDie)
+        if (GameManager.Instance.isDie)
         {
             Debug.Log("»ç¸Á");
             gameresultDieText.text = "»ç¸Á";
         }
-        else if(GameManager.instance.isMissing)
+        else if(GameManager.Instance.isMissing)
         {
             Debug.Log("½ÇÁ¾");
             gameresultDieText.text = "½ÇÁ¾";
         }
 
-        if(GameManager.instance.isSuccess)
+        if(GameManager.Instance.isSuccess)
         {
             Debug.Log("½ÂÁø");
             gameresultNotDieText.color = new Color(0, 0, 1);
             gameresultNotDieText.text = "½ÂÁø";
         }
-        else if(!GameManager.instance.isSuccess)
+        else if(!GameManager.Instance.isSuccess)
         {
             Debug.Log("ÇØ°í");
             gameresultNotDieText.color = new Color(1, 0, 0);
@@ -126,14 +126,14 @@ public class UI_GameResult : MonoBehaviour
 
     void SetText()
     {
-        bigMoneyText.text = GameManager.instance.bigMoneyNum.ToString();
-        mediumMoneyText.text = GameManager.instance.mediumMoneyNum.ToString();
-        smallMoneyText.text = GameManager.instance.smallMoneyNum.ToString();
+        bigMoneyText.text = GameManager.Instance.bigMoneyNum.ToString();
+        mediumMoneyText.text = GameManager.Instance.mediumMoneyNum.ToString();
+        smallMoneyText.text = GameManager.Instance.smallMoneyNum.ToString();
 
-        bigMoneySumText.text = GameManager.instance.totalBigMoney.ToString();
-        mediumMoneySumText.text = GameManager.instance.totalMediumMoney.ToString();
-        smallMoneySumText.text = GameManager.instance.totalSmallMoney.ToString();
+        bigMoneySumText.text = GameManager.Instance.totalBigMoney.ToString();
+        mediumMoneySumText.text = GameManager.Instance.totalMediumMoney.ToString();
+        smallMoneySumText.text = GameManager.Instance.totalSmallMoney.ToString();
 
-        totalMoneyText.text = GameManager.instance.totalMoney.ToString();
+        totalMoneyText.text = GameManager.Instance.totalMoney.ToString();
     }
 }

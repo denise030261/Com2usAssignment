@@ -28,18 +28,18 @@ public class CountItem : MonoBehaviour
         {
             if (child.gameObject.tag== "BigMoney")
             {
-                GameManager.instance.bigMoneyNum++;
+                GameManager.Instance.bigMoneyNum++;
             }
             else if(child.gameObject.tag == "MediumMoney")
             {
-                GameManager.instance.mediumMoneyNum++;
+                GameManager.Instance.mediumMoneyNum++;
             }
             else if(child.gameObject.tag== "SmallMoney")
             {
-                GameManager.instance.smallMoneyNum++;
+                GameManager.Instance.smallMoneyNum++;
             }
         }
 
-        GameManager.instance.CaculateMonoey();
+        GameManager.Instance.CaculateMonoey();
     }
 }

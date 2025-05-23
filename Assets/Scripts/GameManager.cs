@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoSingleton<GameManager>
 {
-    public static GameManager instance = null;
-
     [SerializeField]
     int bigMoney;
 
@@ -30,23 +28,10 @@ public class GameManager : MonoBehaviour
     public int totalMediumMoney;
     public int totalSmallMoney;
 
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this; 
-            DontDestroyOnLoad(gameObject); 
-        }
-        else
-        {
-            if (instance != this) 
-                Destroy(this.gameObject); 
-        } //모노싱글톤 (중복방지를 위한)
-    }
-
     private void Start()
     {
         Init();
+        AudioManager.Instance.PlayBGM("SuperGrottoEscape");
     }
 
     public void Init()

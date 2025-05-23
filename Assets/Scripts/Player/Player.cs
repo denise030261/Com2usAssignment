@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         Init();
-        GameManager.instance.Init();
+        GameManager.Instance.Init();
     }
 
     private void Init()
@@ -107,7 +107,7 @@ public class Player : MonoBehaviour
 
         if(CurrentHp<=0)
         {
-            GameManager.instance.isDie = true;
+            GameManager.Instance.isDie = true;
             gameResultDisplay.SetActive(true);
             Destroy(gameObject);
         }
@@ -124,7 +124,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Finish")
         {
             Debug.Log("ÇÃ·§Æû¿¡ ÀÖÀ½");
-            GameManager.instance.isMissing = false;
+            GameManager.Instance.isMissing = false;
         }
 
         if (collision.gameObject.tag == "Enemy" && !isNoDamage)
@@ -142,7 +142,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Finish")
         {
             Debug.Log("ÇÃ·§Æû¿¡ ¾øÀ½");
-            GameManager.instance.isMissing = true;
+            GameManager.Instance.isMissing = true;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
